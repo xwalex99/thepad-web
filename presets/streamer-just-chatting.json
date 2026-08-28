@@ -1,0 +1,200 @@
+{
+  "format": "thepad-preset",
+  "formatVersion": 1,
+  "id": "streamer-just-chatting",
+  "name": "Just Chatting",
+  "description": "Mascota, micro, escenas suaves, chat y un mensaje BRB listo para copiar.",
+  "category": "streamer",
+  "author": "THEPAD",
+  "profiles": [
+    {
+      "id": "streamer-just-chatting-main",
+      "name": "Chat",
+      "grid": {
+        "columns": 5,
+        "rows": 2
+      },
+      "buttons": [
+        {
+          "id": "btn-streamer-just-chatting-obs",
+          "label": "OBS",
+          "accent": "#9f7cff",
+          "icon": {
+            "kind": "brand",
+            "value": "obs"
+          },
+          "action": {
+            "type": "run_command",
+            "commandId": "cmd-streamer-just-chatting-obs",
+            "shell": "powershell",
+            "runInTerminal": false
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-just-chatting-mascota",
+          "label": "Mascota",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "lucide",
+            "value": "image"
+          },
+          "action": {
+            "type": "streamer_overlay",
+            "operation": "toggle"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-just-chatting-mic",
+          "label": "Micro",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "lucide",
+            "value": "music"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "toggle_mute",
+            "inputName": "Mic/Aux"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-just-chatting-scene-chat",
+          "label": "Chat",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "keyboard"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "switch_scene",
+            "sceneName": "Chat"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-just-chatting-scene-brb",
+          "label": "BRB",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "eye"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "switch_scene",
+            "sceneName": "BRB"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-just-chatting-scene-ending",
+          "label": "Ending",
+          "accent": "#ff6b35",
+          "icon": {
+            "kind": "lucide",
+            "value": "settings"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "switch_scene",
+            "sceneName": "Ending"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-just-chatting-twitch",
+          "label": "Twitch",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "brand",
+            "value": "twitch"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://www.twitch.tv"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-just-chatting-discord",
+          "label": "Discord",
+          "accent": "#9f7cff",
+          "icon": {
+            "kind": "brand",
+            "value": "discord"
+          },
+          "action": {
+            "type": "run_command",
+            "commandId": "cmd-streamer-just-chatting-discord",
+            "shell": "powershell",
+            "runInTerminal": false
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-just-chatting-copy-brb",
+          "label": "Copiar BRB",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "lucide",
+            "value": "copy"
+          },
+          "action": {
+            "type": "copy_text",
+            "text": "¡BRB! Vuelvo en un momento. Gracias por seguir el chat."
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-just-chatting-volup",
+          "label": "Vol+",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "lucide",
+            "value": "activity"
+          },
+          "action": {
+            "type": "volume_control",
+            "direction": "up"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "allowedCommands": [
+    {
+      "id": "cmd-streamer-just-chatting-obs",
+      "label": "OBS",
+      "kind": "script",
+      "shell": "powershell",
+      "command": "Start-Process 'obs64'",
+      "args": [],
+      "runInTerminal": false
+    },
+    {
+      "id": "cmd-streamer-just-chatting-discord",
+      "label": "Discord",
+      "kind": "script",
+      "shell": "powershell",
+      "command": "Start-Process 'discord:'",
+      "args": [],
+      "runInTerminal": false
+    }
+  ],
+  "profileRules": [
+    {
+      "id": "rule-streamer-just-chatting-obs",
+      "profileId": "streamer-just-chatting-main",
+      "matchType": "process",
+      "pattern": "obs64.exe",
+      "enabled": true,
+      "priority": 80
+    }
+  ],
+  "soundboards": []
+}

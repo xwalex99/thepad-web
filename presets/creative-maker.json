@@ -1,0 +1,178 @@
+{
+  "format": "thepad-preset",
+  "formatVersion": 1,
+  "id": "creative-maker",
+  "name": "Diseño y maker",
+  "description": "Photoshop, assets, guardar, exportar y control de brillo.",
+  "category": "creative",
+  "author": "THEPAD",
+  "profiles": [
+    {
+      "id": "creative-maker-main",
+      "name": "Diseño",
+      "grid": {
+        "columns": 5,
+        "rows": 2
+      },
+      "buttons": [
+        {
+          "id": "btn-creative-maker-photoshop",
+          "label": "Photoshop",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "brand",
+            "value": "photoshop"
+          },
+          "action": {
+            "type": "run_command",
+            "commandId": "cmd-creative-maker-photoshop",
+            "shell": "powershell",
+            "runInTerminal": false
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-creative-maker-pictures",
+          "label": "Imágenes",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "lucide",
+            "value": "image"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{pictures}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-creative-maker-projects",
+          "label": "Proyectos",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "folder"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{documents}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-creative-maker-save",
+          "label": "Guardar",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "download"
+          },
+          "action": {
+            "type": "type_keys",
+            "text": "ctrl+s",
+            "mode": "hotkey"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-creative-maker-export",
+          "label": "Exportar",
+          "accent": "#9f7cff",
+          "icon": {
+            "kind": "lucide",
+            "value": "upload"
+          },
+          "action": {
+            "type": "type_keys",
+            "text": "ctrl+shift+e",
+            "mode": "hotkey"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-creative-maker-bright-up",
+          "label": "Brillo +",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "lucide",
+            "value": "activity"
+          },
+          "action": {
+            "type": "brightness_control",
+            "direction": "up"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-creative-maker-bright-down",
+          "label": "Brillo -",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "lucide",
+            "value": "activity"
+          },
+          "action": {
+            "type": "brightness_control",
+            "direction": "down"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-creative-maker-explorer",
+          "label": "Explorador",
+          "accent": "#ff6b35",
+          "icon": {
+            "kind": "lucide",
+            "value": "app"
+          },
+          "action": {
+            "type": "system_tool",
+            "tool": "explorer"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-creative-maker-assets-downloads",
+          "label": "Descargas",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "download"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{downloads}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-creative-maker-assets-desktop",
+          "label": "Escritorio",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "folder"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{desktop}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "allowedCommands": [
+    {
+      "id": "cmd-creative-maker-photoshop",
+      "label": "Photoshop",
+      "kind": "script",
+      "shell": "powershell",
+      "command": "Start-Process 'Photoshop'",
+      "args": [],
+      "runInTerminal": false
+    }
+  ],
+  "profileRules": [],
+  "soundboards": []
+}

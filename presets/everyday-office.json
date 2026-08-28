@@ -1,0 +1,165 @@
+{
+  "format": "thepad-preset",
+  "formatVersion": 1,
+  "id": "everyday-office",
+  "name": "Oficina",
+  "description": "Outlook, Teams, calendario, notas de reunión y mute rápido.",
+  "category": "productivity",
+  "author": "THEPAD",
+  "profiles": [
+    {
+      "id": "everyday-office-main",
+      "name": "Oficina",
+      "grid": {
+        "columns": 5,
+        "rows": 2
+      },
+      "buttons": [
+        {
+          "id": "btn-everyday-office-outlook",
+          "label": "Outlook",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "brand",
+            "value": "outlook"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://outlook.office.com"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-office-teams",
+          "label": "Teams",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "brand",
+            "value": "teams"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://teams.microsoft.com"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-office-calendar",
+          "label": "Calendario",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "brand",
+            "value": "calendar"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://outlook.office.com/calendar"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-office-mail",
+          "label": "Correo",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "brand",
+            "value": "outlook"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "mailto:"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-office-notes",
+          "label": "Notas reunión",
+          "accent": "#9f7cff",
+          "icon": {
+            "kind": "lucide",
+            "value": "clipboard"
+          },
+          "action": {
+            "type": "copy_text",
+            "text": "## Reunión\n\n**Fecha:** \n**Asistentes:** \n**Agenda:**\n- \n\n**Notas:**\n- \n\n**Acciones:**\n- [ ] "
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-office-comms-mute-teams",
+          "label": "Mute Teams",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "brand",
+            "value": "teams"
+          },
+          "action": {
+            "type": "type_keys",
+            "text": "ctrl+shift+m",
+            "mode": "hotkey"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-office-calculator",
+          "label": "Calculadora",
+          "accent": "#ff6b35",
+          "icon": {
+            "kind": "lucide",
+            "value": "terminal"
+          },
+          "action": {
+            "type": "system_tool",
+            "tool": "calculator"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-office-explorer",
+          "label": "Explorador",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "lucide",
+            "value": "app"
+          },
+          "action": {
+            "type": "system_tool",
+            "tool": "explorer"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-office-comms-vol-up",
+          "label": "Vol +",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "activity"
+          },
+          "action": {
+            "type": "volume_control",
+            "direction": "up"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-office-comms-mute",
+          "label": "Silencio",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "music"
+          },
+          "action": {
+            "type": "volume_control",
+            "direction": "mute"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "allowedCommands": [],
+  "profileRules": [],
+  "soundboards": []
+}

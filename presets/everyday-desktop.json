@@ -1,0 +1,164 @@
+{
+  "format": "thepad-preset",
+  "formatVersion": 1,
+  "id": "everyday-desktop",
+  "name": "Escritorio diario",
+  "description": "Navegador, correo, carpetas, silencio y ajustes de Windows.",
+  "category": "everyday",
+  "author": "THEPAD",
+  "profiles": [
+    {
+      "id": "everyday-desktop-main",
+      "name": "Diario",
+      "grid": {
+        "columns": 5,
+        "rows": 2
+      },
+      "buttons": [
+        {
+          "id": "btn-everyday-desktop-browser",
+          "label": "Google",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "brand",
+            "value": "google"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://www.google.com"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-desktop-gmail",
+          "label": "Gmail",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "brand",
+            "value": "gmail"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://mail.google.com"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-desktop-downloads",
+          "label": "Descargas",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "download"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{downloads}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-desktop-desktop",
+          "label": "Escritorio",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "folder"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{desktop}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-desktop-explorer",
+          "label": "Explorador",
+          "accent": "#9f7cff",
+          "icon": {
+            "kind": "lucide",
+            "value": "app"
+          },
+          "action": {
+            "type": "system_tool",
+            "tool": "explorer"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-desktop-calculator",
+          "label": "Calculadora",
+          "accent": "#ff6b35",
+          "icon": {
+            "kind": "lucide",
+            "value": "terminal"
+          },
+          "action": {
+            "type": "system_tool",
+            "tool": "calculator"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-desktop-mute",
+          "label": "Silencio",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "music"
+          },
+          "action": {
+            "type": "volume_control",
+            "direction": "mute"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-desktop-settings",
+          "label": "Ajustes",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "settings"
+          },
+          "action": {
+            "type": "system_tool",
+            "tool": "settings"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-desktop-files-pictures",
+          "label": "Imágenes",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "lucide",
+            "value": "image"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{pictures}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-desktop-files-documents",
+          "label": "Documentos",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "folder"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{documents}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "allowedCommands": [],
+  "profileRules": [],
+  "soundboards": []
+}

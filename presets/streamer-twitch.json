@@ -1,0 +1,203 @@
+{
+  "format": "thepad-preset",
+  "formatVersion": 1,
+  "id": "streamer-twitch",
+  "name": "Directo Twitch",
+  "description": "OBS, mascota, micro, escenas, chat de Twitch y un cierre automático.",
+  "category": "streamer",
+  "author": "THEPAD",
+  "profiles": [
+    {
+      "id": "streamer-twitch-main",
+      "name": "Directo",
+      "grid": {
+        "columns": 5,
+        "rows": 2
+      },
+      "buttons": [
+        {
+          "id": "btn-streamer-twitch-obs",
+          "label": "OBS",
+          "accent": "#9f7cff",
+          "icon": {
+            "kind": "brand",
+            "value": "obs"
+          },
+          "action": {
+            "type": "run_command",
+            "commandId": "cmd-streamer-twitch-obs",
+            "shell": "powershell",
+            "runInTerminal": false
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-twitch-mascota",
+          "label": "Mascota",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "lucide",
+            "value": "image"
+          },
+          "action": {
+            "type": "streamer_overlay",
+            "operation": "toggle"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-twitch-start",
+          "label": "Iniciar",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "activity"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "start_stream"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-twitch-stop",
+          "label": "Parar",
+          "accent": "#ff6b35",
+          "icon": {
+            "kind": "lucide",
+            "value": "zap"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "stop_stream"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-twitch-mic",
+          "label": "Micro",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "lucide",
+            "value": "music"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "toggle_mute",
+            "inputName": "Mic/Aux"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-twitch-scene-chat",
+          "label": "Just Chatting",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "lucide",
+            "value": "keyboard"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "switch_scene",
+            "sceneName": "Just Chatting"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-twitch-scene-game",
+          "label": "Gameplay",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "gamepad"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "switch_scene",
+            "sceneName": "Gameplay"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-twitch-scene-brb",
+          "label": "BRB",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "eye"
+          },
+          "action": {
+            "type": "obs_control",
+            "action": "switch_scene",
+            "sceneName": "BRB"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-twitch-chat",
+          "label": "Chat",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "brand",
+            "value": "twitch"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://www.twitch.tv"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-streamer-twitch-cierre",
+          "label": "Cierre",
+          "accent": "#ff6b35",
+          "icon": {
+            "kind": "lucide",
+            "value": "settings"
+          },
+          "action": {
+            "type": "sequence",
+            "steps": [
+              {
+                "type": "obs_control",
+                "action": "switch_scene",
+                "sceneName": "BRB"
+              },
+              {
+                "type": "delay",
+                "ms": 2000
+              },
+              {
+                "type": "obs_control",
+                "action": "stop_stream"
+              }
+            ]
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "allowedCommands": [
+    {
+      "id": "cmd-streamer-twitch-obs",
+      "label": "OBS",
+      "kind": "script",
+      "shell": "powershell",
+      "command": "Start-Process 'obs64'",
+      "args": [],
+      "runInTerminal": false
+    }
+  ],
+  "profileRules": [
+    {
+      "id": "rule-streamer-twitch-obs",
+      "profileId": "streamer-twitch-main",
+      "matchType": "process",
+      "pattern": "obs64.exe",
+      "enabled": true,
+      "priority": 80
+    }
+  ],
+  "soundboards": []
+}

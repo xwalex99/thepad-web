@@ -1,0 +1,215 @@
+{
+  "format": "thepad-preset",
+  "formatVersion": 1,
+  "id": "gamer-rpg",
+  "name": "RPG y mundo abierto",
+  "description": "Discord, Steam, loot, diario de misiones, saves y música de fondo.",
+  "category": "gamer",
+  "author": "THEPAD",
+  "profiles": [
+    {
+      "id": "gamer-rpg-main",
+      "name": "Aventura",
+      "grid": {
+        "columns": 5,
+        "rows": 2
+      },
+      "buttons": [
+        {
+          "id": "btn-gamer-rpg-discord",
+          "label": "Discord",
+          "accent": "#9f7cff",
+          "icon": {
+            "kind": "brand",
+            "value": "discord"
+          },
+          "action": {
+            "type": "run_command",
+            "commandId": "cmd-gamer-rpg-discord",
+            "shell": "powershell",
+            "runInTerminal": false
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-gamer-rpg-steam",
+          "label": "Steam",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "brand",
+            "value": "steam"
+          },
+          "action": {
+            "type": "run_command",
+            "commandId": "cmd-gamer-rpg-steam",
+            "shell": "powershell",
+            "runInTerminal": false
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-gamer-rpg-session",
+          "label": "Abrir sesión",
+          "accent": "#ff6b35",
+          "icon": {
+            "kind": "lucide",
+            "value": "zap"
+          },
+          "action": {
+            "type": "sequence",
+            "steps": [
+              {
+                "type": "run_command",
+                "commandId": "cmd-gamer-rpg-discord",
+                "shell": "powershell",
+                "runInTerminal": false
+              },
+              {
+                "type": "delay",
+                "ms": 1500
+              },
+              {
+                "type": "run_command",
+                "commandId": "cmd-gamer-rpg-steam",
+                "shell": "powershell",
+                "runInTerminal": false
+              }
+            ]
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-gamer-rpg-loot",
+          "label": "Plantilla loot",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "clipboard"
+          },
+          "action": {
+            "type": "copy_text",
+            "text": "## Botín\nFecha:\nZona:\n- Ítem | Rareza | Cantidad\n- \nOro:\nNotas:\n"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-gamer-rpg-diario-quests",
+          "label": "Diario misiones",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "clipboard"
+          },
+          "action": {
+            "type": "copy_text",
+            "text": "## Diario\nPersonaje:\nUbicación:\nObjetivo:\nHechos:\n- \nNotas:\n"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-gamer-rpg-documents",
+          "label": "Documentos",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "folder"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{documents}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-gamer-rpg-spotify",
+          "label": "Spotify",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "brand",
+            "value": "spotify"
+          },
+          "action": {
+            "type": "run_command",
+            "commandId": "cmd-gamer-rpg-spotify",
+            "shell": "powershell",
+            "runInTerminal": false
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-gamer-rpg-play",
+          "label": "Play/Pausa",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "music"
+          },
+          "action": {
+            "type": "media_control",
+            "action": "play_pause"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-gamer-rpg-mute",
+          "label": "Mute PC",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "lucide",
+            "value": "music"
+          },
+          "action": {
+            "type": "volume_control",
+            "direction": "mute"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-gamer-rpg-calculator",
+          "label": "Calculadora",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "lucide",
+            "value": "terminal"
+          },
+          "action": {
+            "type": "system_tool",
+            "tool": "calculator"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "allowedCommands": [
+    {
+      "id": "cmd-gamer-rpg-discord",
+      "label": "Discord",
+      "kind": "script",
+      "shell": "powershell",
+      "command": "Start-Process 'discord:'",
+      "args": [],
+      "runInTerminal": false
+    },
+    {
+      "id": "cmd-gamer-rpg-steam",
+      "label": "Steam",
+      "kind": "script",
+      "shell": "powershell",
+      "command": "Start-Process 'steam://open/main'",
+      "args": [],
+      "runInTerminal": false
+    },
+    {
+      "id": "cmd-gamer-rpg-spotify",
+      "label": "Spotify",
+      "kind": "script",
+      "shell": "powershell",
+      "command": "Start-Process 'spotify:'",
+      "args": [],
+      "runInTerminal": false
+    }
+  ],
+  "profileRules": [],
+  "soundboards": []
+}

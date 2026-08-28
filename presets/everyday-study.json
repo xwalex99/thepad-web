@@ -1,0 +1,189 @@
+{
+  "format": "thepad-preset",
+  "formatVersion": 1,
+  "id": "everyday-study",
+  "name": "Estudio",
+  "description": "Drive, Wikipedia, apuntes, traductor, YouTube y un atajo de enfoque.",
+  "category": "everyday",
+  "author": "THEPAD",
+  "profiles": [
+    {
+      "id": "everyday-study-main",
+      "name": "Estudio",
+      "grid": {
+        "columns": 5,
+        "rows": 2
+      },
+      "buttons": [
+        {
+          "id": "btn-everyday-study-google",
+          "label": "Google",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "brand",
+            "value": "google"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://www.google.com"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-study-wikipedia",
+          "label": "Wikipedia",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "brand",
+            "value": "wikipedia"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://es.wikipedia.org"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-study-drive",
+          "label": "Drive",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "brand",
+            "value": "drive"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://drive.google.com"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-study-documents",
+          "label": "Documentos",
+          "accent": "#ffe66d",
+          "icon": {
+            "kind": "lucide",
+            "value": "folder"
+          },
+          "action": {
+            "type": "open_path",
+            "path": "{{documents}}"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-study-notepad",
+          "label": "Bloc de notas",
+          "accent": "#9f7cff",
+          "icon": {
+            "kind": "lucide",
+            "value": "terminal"
+          },
+          "action": {
+            "type": "run_command",
+            "commandId": "cmd-everyday-study-notepad",
+            "shell": "powershell",
+            "runInTerminal": false
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-study-notes",
+          "label": "Apuntes",
+          "accent": "#ff6b35",
+          "icon": {
+            "kind": "lucide",
+            "value": "clipboard"
+          },
+          "action": {
+            "type": "copy_text",
+            "text": "## Apuntes\n\n**Tema:** \n**Fecha:** \n**Fuente:** \n\n### Resumen\n- \n\n### Dudas\n- \n\n### Próximos pasos\n- [ ] "
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-study-focus",
+          "label": "Enfoque",
+          "accent": "#8fff00",
+          "icon": {
+            "kind": "lucide",
+            "value": "eye"
+          },
+          "action": {
+            "type": "sequence",
+            "steps": [
+              {
+                "type": "open_url",
+                "url": "https://drive.google.com"
+              },
+              {
+                "type": "delay",
+                "ms": 1500
+              },
+              {
+                "type": "open_path",
+                "path": "{{documents}}"
+              }
+            ]
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-study-resources-translate",
+          "label": "Traductor",
+          "accent": "#ff2bd6",
+          "icon": {
+            "kind": "brand",
+            "value": "translate"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://translate.google.com"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-study-resources-youtube",
+          "label": "YouTube",
+          "accent": "#ff6b35",
+          "icon": {
+            "kind": "brand",
+            "value": "youtube"
+          },
+          "action": {
+            "type": "open_url",
+            "url": "https://www.youtube.com"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        },
+        {
+          "id": "btn-everyday-study-calculator",
+          "label": "Calculadora",
+          "accent": "#00f5ff",
+          "icon": {
+            "kind": "lucide",
+            "value": "terminal"
+          },
+          "action": {
+            "type": "system_tool",
+            "tool": "calculator"
+          },
+          "updatedAt": "2026-08-26T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "allowedCommands": [
+    {
+      "id": "cmd-everyday-study-notepad",
+      "label": "Bloc de notas",
+      "kind": "process",
+      "shell": "powershell",
+      "command": "notepad.exe",
+      "args": [],
+      "runInTerminal": false
+    }
+  ],
+  "profileRules": [],
+  "soundboards": []
+}
